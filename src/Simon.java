@@ -38,11 +38,11 @@ public class Simon extends BaseCalculation{
     /**
      * This method calulates the facorial for input n
      * @param n
-     * @return factorial
+     * @return factorial3
      */
-    int factorial(int n) {
+    double factorial(int n) {
         {
-            int product = 1;
+            double product = 1;
             for ( int j=1; j<=n; j++ )
                 product *= j;
             return product;
