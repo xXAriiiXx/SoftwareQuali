@@ -1,4 +1,8 @@
 import java.lang.Math;
+
+/**
+ * @author 8951392
+ */
 public class System1 extends BaseCalculation {
 
     public System1(int elements, double lambda) {
@@ -33,7 +37,9 @@ public class System1 extends BaseCalculation {
     long calcFactorial(int n) {
         /**
          * Calculates factorial iteratively
-         */
+         * @param n
+         * @return n!
+         **/
         long fac = 1;
         for(int i=1; i<=n; i++)
         {
