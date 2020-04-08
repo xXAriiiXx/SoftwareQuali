@@ -1,7 +1,7 @@
 import java.lang.Math;
-public class Ari extends BaseCalculation {
+public class System1 extends BaseCalculation {
 
-    public Ari(int elements, double lambda) {
+    public System1(int elements, double lambda) {
         super(elements, lambda);
     }
 

@@ -1,4 +1,4 @@
-public class Maxi extends BaseCalculation {
+public class System3 extends BaseCalculation {
 
     /**
      * Constuctor for this class. The parameters used in the calculations
@@ -6,7 +6,7 @@ public class Maxi extends BaseCalculation {
      * @param elements the number of elements.
      * @param lambda the value of lambda.
      */
-    public Maxi(int elements, double lambda) {
+    public System3(int elements, double lambda) {
         super(elements, lambda);
     }
 

@@ -5,9 +5,9 @@ import java.lang.Math.*;
  *
  * @author 9916444
  */
-public class Simon extends BaseCalculation{
+public class System5 extends BaseCalculation{
 
-    public Simon(int elements, double lambda) {
+    public System5(int elements, double lambda) {
         super(elements, lambda);
     }
 

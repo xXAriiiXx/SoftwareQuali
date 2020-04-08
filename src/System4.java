@@ -1,7 +1,7 @@
 import java.lang.Math;
-public class Pascal extends BaseCalculation {
+public class System4 extends BaseCalculation {
 
-    public Pascal(int elements, double lambda) {
+    public System4(int elements, double lambda) {
         super(elements, lambda);
     }
 

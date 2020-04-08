@@ -3,14 +3,14 @@
  * The class calculates the parallel and serial MTTF for the input value
  * number of elements and failure rate.
  */
-public class Beni extends BaseCalculation {
+public class System2 extends BaseCalculation {
     /**
      * Constructor for the class Beni. This one sets the class-variables
      * element and lambda.
      * @param elements is the number of elements in the MTTF module.
      * @param lambda is the failure rate of the module.
      */
-    public Beni(int elements, double lambda) {
+    public System2(int elements, double lambda) {
         super(elements, lambda);
     }
 
