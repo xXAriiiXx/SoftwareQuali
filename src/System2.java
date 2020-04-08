@@ -2,6 +2,8 @@
  * This class represents one module for the MTTF calculation.
  * The class calculates the parallel and serial MTTF for the input value
  * number of elements and failure rate.
+ *
+ * @author 4622546
  */
 public class System2 extends BaseCalculation {
     /**
