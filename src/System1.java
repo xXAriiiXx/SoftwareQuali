@@ -1,4 +1,8 @@
 import java.lang.Math;
+
+/**
+ * @author 8951392
+ */
 public class System1 extends BaseCalculation {
 
     public System1(int elements, double lambda) {
@@ -8,7 +12,8 @@ public class System1 extends BaseCalculation {
     @Override
     double calculateParallelMTTF() {
         /**
-         * Calculates Parallel Mean Time To Failure
+         * Calculates parallel mean time to failure
+         * @return MTTF for parallel system
          */
         double sum = 0;
         double tmp;
@@ -25,7 +30,8 @@ public class System1 extends BaseCalculation {
     @Override
     double calculateSerialMTTF() {
         /**
-         * Calculates Serial Mean Time To Failure
+         * Calculate serial mean time to failure
+         * @return MTTF for serial system
          */
         return 1/(lambda*elements);
     }
@@ -33,7 +39,9 @@ public class System1 extends BaseCalculation {
     long calcFactorial(int n) {
         /**
          * Calculates factorial iteratively
-         */
+         * @param n
+         * @return n!
+         **/
         long fac = 1;
         for(int i=1; i<=n; i++)
         {
