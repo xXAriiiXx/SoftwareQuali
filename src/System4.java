@@ -2,7 +2,7 @@
 import java.lang.Math;
 /**
  * This class represents one system for calculating the mean time to failure (MTTF)
- * for a parallel arrangement and a series arrangement of the identical component
+ * for a parallel arrangement and a series arrangement of a number of identical components
  * @author 1650076
  */
 public class System4 extends BaseCalculation {
