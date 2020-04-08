@@ -13,20 +13,23 @@ public class System5 extends BaseCalculation{
 
     /**
      * This Methods calculates the parallel MTTF = MTTF_P
+     * using the equation MTTF_P = (1 / lambda) * Sum i to n ((-1)^(n+1) * (n! / ( i * i! * (n-i)!)))
      * @return MTTP_P
      */
     @java.lang.Override
     double calculateParallelMTTF() {
-        double temp_val = 0.0;
+        double sum_result = 0.0;
 
+        // Calculates sum of equation
         for (int i = 1; i <= elements; i++)
-            temp_val += ( (Math.pow((-1.0), (elements + 1))) * ( (double)factorial(elements) / ( i * (double)factorial(i) * ( (double)factorial( elements - i) ))));
+            sum_result += ( (Math.pow((-1.0), (elements + 1))) * ( (double)factorial(elements) / ( i * (double)factorial(i) * ( (double)factorial( elements - i) ))));
 
-        return (1 / lambda) * temp_val;
+        return (1 / lambda) * sum_result;
     }
 
     /**
      * This Methods calculates the serial MTTF = MTTF_R
+     * using the equation MTTF_R = 1 / (lambda * n)
      * @return MTTF_R
      */
     @java.lang.Override
@@ -37,7 +40,7 @@ public class System5 extends BaseCalculation{
     /**
      * This method calulates the facorial for input n
      * @param n
-     * @return factorial3
+     * @return n!
      */
     double factorial(int n) {
         {
