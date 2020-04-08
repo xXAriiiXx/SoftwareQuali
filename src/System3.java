@@ -1,3 +1,8 @@
+/**
+ * System 3 for MTTF-Calculation.
+ * This class extends the abstract class @see BaseCalculation.
+ * @author 8019500
+ */
 public class System3 extends BaseCalculation {
 
     /**
