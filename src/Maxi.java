@@ -15,9 +15,9 @@ public class Maxi extends BaseCalculation {
      * @param n the number to calculate the factorial of.
      * @return the factorial of the input number.
      */
-    private int factorial(int n) {
-        int result = 1;
-        for(int i = n; i > 0; i--) {
+    private long factorial(long n) {
+        long result = 1;
+        for(long i = n; i > 0; i--) {
             result = result * i;
         }
         return result;
@@ -35,7 +35,7 @@ public class Maxi extends BaseCalculation {
         for(int i = 1; i <= this.elements; i++) {
             double expResult = Math.pow(-1, this.elements + 1);
             double numerator = this.factorial(this.elements);
-            double denominator = (double)i * (double)this.factorial(i) * (double) this.factorial(this.elements - i);
+            double denominator = i * this.factorial(i) * this.factorial(this.elements - i);
 
             sumResult = sumResult + expResult * (numerator / denominator);
         }
