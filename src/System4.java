@@ -41,16 +41,15 @@ public class System4 extends BaseCalculation {
     }
 
     /**
-     * calculates factorial of a number (recursive structure)
+     * calculates factorial of a number (iterative structure)
      * @param facnum the number for calculating the factorial (int)
-     * @return the factorial of the number (faknum) (long)
+     * @return the factorial of the number (facnum!) (long)
      */
     private long fac (int facnum){
-        if(facnum > 1){
-            return facnum * fac(facnum - 1);
+        long factorial = 1;
+        for (int i = 2; i <= facnum; i++){
+            factorial *= i;
         }
-        else{
-            return 1;
-        }
+        return factorial;
     }
 }
