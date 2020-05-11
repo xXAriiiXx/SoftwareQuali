@@ -6,6 +6,7 @@ public class Main {
         /*
         Input values are the same, same output is expected everywhere
          */
+        System.out.println("Alle Systeme erhalten dieselben Übergabeparameter:");
         int numberElements = 5;
         double lambda = 0.1;
         BaseCalculation[] allSystems = new BaseCalculation[5];
@@ -19,6 +20,7 @@ public class Main {
         /*
         4 inputs the same, one is different, voting should still allow
         */
+        System.out.println("Ein System erhaelt unterschiedliche Übergabeparameter:");
         int oneDifferentElement = 6;
         allSystems[0] = new System1(numberElements, lambda);
         allSystems[1] = new System4(numberElements,lambda);
@@ -30,6 +32,7 @@ public class Main {
         /*
         2 Inputs different, voting should fail, go into safe state
         */
+        System.out.println("Zwei Systeme erhalten unterschiedliche Übergabeparameter:");
         int twoDifferentElement = 4;
         allSystems[0] = new System1(twoDifferentElement, lambda);
         allSystems[1] = new System4(numberElements,lambda);
