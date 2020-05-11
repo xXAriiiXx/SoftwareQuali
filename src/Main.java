@@ -1,6 +1,10 @@
 import java.util.Scanner;
 public class Main {
 
+    /**
+     * Entrypoint for the application.
+     * @param args command-line parameters.
+     */
     public static void main(String[] args) {
         int statusCode;
         /*
@@ -51,6 +55,10 @@ public class Main {
         output(statusCode);
     }
 
+    /**
+     * Takes user input for 5 systems and passes the user-entered parameters to the individual systems
+     * @param allSystems an array containing 5 systems.
+     */
     public static void input(BaseCalculation[] allSystems)
     {
         int n;
@@ -94,6 +102,11 @@ public class Main {
     }
 
 
+    /**
+     * Voting function for determining system state.
+     * @param allSystems the array containing an arbitrary number of systems.
+     * @return the system state as integer.
+     */
     public static int voting(BaseCalculation[] allSystems)
     {
         int numberOfSameAnswers = 0;
@@ -102,6 +115,7 @@ public class Main {
             for(int j = i+1; j<allSystems.length; j++)
             {
                 if(j == i) continue;
+                //Because of floating-point-precision, there has to be a tolerance taken into account.
                 if(Math.abs(allSystems[j].calculateParallelMTTF()-allSystems[i].calculateParallelMTTF()) < 0.000001)
                     if(Math.abs(allSystems[j].calculateSerialMTTF()-allSystems[i].calculateSerialMTTF()) < 0.000001)
                         numberOfSameAnswers++;
@@ -110,12 +124,18 @@ public class Main {
         int expected = calculateExpectedSame(allSystems.length);
         if(numberOfSameAnswers == expected)
             return 1;
+        //If one system has a different result, n-1 answers differ. 
         else if(numberOfSameAnswers == expected-(allSystems.length-1))
             return 0;
         else
             return -1;
     }
 
+    /**
+     * Calculates the expected number of equal system answer combinations.
+     * @param n the number of systems to be compared.
+     * @return the expected number of equal combinations.
+     */
     public static int calculateExpectedSame(int n)
     {
         int sum = 0;
@@ -126,6 +146,10 @@ public class Main {
         return sum;
     }
 
+    /**
+     * Takes the current status code of the system and prints it as a string to the console.
+     * @param status the current status code of the system.
+     */
     public static void output(int status)
     {
         if(status == 1)
