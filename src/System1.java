@@ -9,12 +9,12 @@ public class System1 extends BaseCalculation {
         super(elements, lambda);
     }
 
+    /**
+     * Calculates parallel mean time to failure
+     * @return MTTF for parallel system
+     */
     @Override
     double calculateParallelMTTF() {
-        /**
-         * Calculates parallel mean time to failure
-         * @return MTTF for parallel system
-         */
         double sum = 0;
         double tmp;
         for(int i=1; i <= elements; i++)
@@ -27,21 +27,22 @@ public class System1 extends BaseCalculation {
         return sum;
     }
 
+    /**
+     * Calculate serial mean time to failure
+     * @return MTTF for serial system
+     */
     @Override
     double calculateSerialMTTF() {
-        /**
-         * Calculate serial mean time to failure
-         * @return MTTF for serial system
-         */
+
         return 1/(lambda*elements);
     }
 
+    /**
+     * Calculates factorial iteratively
+     * @param n
+     * @return n!
+     **/
     long calcFactorial(int n) {
-        /**
-         * Calculates factorial iteratively
-         * @param n
-         * @return n!
-         **/
         long fac = 1;
         for(int i=1; i<=n; i++)
         {
