@@ -14,8 +14,8 @@ public class Main {
         allSystems[2] = new System3(numberElements, lambda);
         allSystems[3] = new System5(numberElements, lambda);
         allSystems[4] = new System2(numberElements, lambda);
-        statusCode = Voting(allSystems);
-        Ausgabe(statusCode);
+        statusCode = voting(allSystems);
+        output(statusCode);
         /*
         4 inputs the same, one is different, voting should still allow
         */
@@ -25,8 +25,8 @@ public class Main {
         allSystems[2] = new System3(numberElements, lambda);
         allSystems[3] = new System5(numberElements, lambda);
         allSystems[4] = new System2(oneDifferentElement, lambda);
-        statusCode = Voting(allSystems);
-        Ausgabe(statusCode);
+        statusCode = voting(allSystems);
+        output(statusCode);
         /*
         2 Inputs different, voting should fail, go into safe state
         */
@@ -36,19 +36,19 @@ public class Main {
         allSystems[2] = new System3(numberElements, lambda);
         allSystems[3] = new System5(oneDifferentElement, lambda);
         allSystems[4] = new System2(numberElements, lambda);
-        statusCode = Voting(allSystems);
-        Ausgabe(statusCode);
+        statusCode = voting(allSystems);
+        output(statusCode);
         /*
         User input for each System
          */
         System.out.println();
         System.out.println("Manuelle Eingabe der Parameter für jedes System");
-        Eingabe(allSystems);
-        statusCode = Voting(allSystems);
-        Ausgabe(statusCode);
+        input(allSystems);
+        statusCode = voting(allSystems);
+        output(statusCode);
     }
 
-    public static void Eingabe(BaseCalculation[] allSystems)
+    public static void input(BaseCalculation[] allSystems)
     {
         int n;
         double lambda;
@@ -91,7 +91,7 @@ public class Main {
     }
 
 
-    public static int Voting(BaseCalculation[] allSystems)
+    public static int voting(BaseCalculation[] allSystems)
     {
         int numberOfSameAnswers = 0;
         for(int i = 0; i < allSystems.length-1; i++)
@@ -123,7 +123,7 @@ public class Main {
         return sum;
     }
 
-    public static void Ausgabe(int status)
+    public static void output(int status)
     {
         if(status == 1)
             System.out.println("Keine Fehler aufgetreten!");
